@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.leo.printerdemo.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/activity_vertical_margin"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/activity_vertical_margin">
+
+        <TextView
+            android:id="@+id/tv_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="222"/>
+        <TextView
+            android:layout_below="@+id/tv_count"
+            android:id="@+id/tv_ip_str"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:gravity="center_vertical"
+            android:text="IP地址："/>
+
+        <EditText
+            android:id="@+id/et_ip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tv_ip_str"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_toRightOf="@+id/tv_ip_str"
+            android:gravity="center_vertical"
+            android:padding="6dp"
+            android:text="192.168.1."/>
+
+        <TextView
+            android:id="@+id/tv_port_str"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/tv_ip_str"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:gravity="center_vertical"
+            android:text="端口："/>
+
+        <EditText
+            android:id="@+id/et_port"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tv_port_str"
+            android:layout_alignLeft="@+id/et_ip"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/tv_port_str"
+            android:layout_toRightOf="@+id/tv_port_str"
+            android:gravity="center_vertical"
+            android:inputType="number"
+            android:padding="6dp"
+            android:text="9100"/>
+
+
+        <TextView
+            android:id="@+id/tv_repeat_str"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/tv_port_str"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:gravity="center_vertical"
+            android:text="打印份数："/>
+
+        <EditText
+            android:id="@+id/et_repeat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tv_repeat_str"
+            android:layout_alignLeft="@+id/et_ip"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/tv_repeat_str"
+            android:layout_toRightOf="@+id/tv_repeat_str"
+            android:gravity="center_vertical"
+            android:hint="1"
+            android:inputType="number"
+            android:padding="6dp"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_repeat_str"
+            android:layout_marginTop="20dp"
+            android:visibility="gone">
+
+
+            <Button
+                android:id="@+id/btn_confirm"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                android:onClick="btnOperate"
+                android:text="确定"/>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</RelativeLayout>
